@@ -1,0 +1,116 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.sidebar {
+  position: fixed;
+  left: -300px;
+  width: 250px;
+  height: 100%;
+  background: gray;
+  transition-duration: 0.4s;
+}
+
+.sidebar header {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  background: darkgray;
+  user-select: none;
+  padding: 12px;
+}
+
+.sidebar ul a {
+  display: block;
+  line-height: 70px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition-duration: 0.4s;
+}
+
+ul li :hover {
+  padding-left: 55px;
+}
+
+.sidebar ul a i {
+  margin-right: 12px;
+}
+
+section {
+  background: url(/Bilder/BG.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+#check {
+  display: none;
+}
+label #button,
+label #close {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 4px;
+}
+label #button {
+  left: 40px;
+  top: 30px;
+  color: white;
+  font-size: 36px;
+  transition: 0.8s;
+}
+
+label #close {
+  z-index: 1;
+  left: -200px;
+  top: 12px;
+  font-size: 32px;
+  transition: 0.6s;
+  color: white;
+}
+
+#check:checked ~ label #button {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #close {
+  left: 200px;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ section {
+  margin-left: 250px;
+  transition: 0.6s;
+}
+/* .button {
+  background-color: white;
+  color: black;
+  border: 2px solid #008cba;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 48px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #008cba;
+  color: white;
+  border: none;
+} */
