@@ -2,18 +2,92 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
 }
+
+section {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: auto;
+}
+
+section header {
+  font-size: 48px;
+  margin-bottom: 40px;
+  margin-top: 70px;
+  letter-spacing: 4px;
+}
+
+section nav {
+  text-align: center;
+}
+
+section ul {
+  display: block;
+  padding: 20px;
+}
+
+section div {
+  height: 20vh;
+  text-align: center;
+  padding-top: 70px;
+}
+
+main {
+  background: url(/Bilder/BG3.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  font-size: 12px;
+  color: white;
+}
+
+.media {
+  display: inline-block;
+  position: relative;
+  left: 28%;
+  top: -40px;
+}
+
+.media figure {
+  float: left;
+  padding: 30px;
+  justify-content: space-around;
+}
+
+.trailers iframe {
+  padding: 40px;
+}
+
+.space {
+  margin-top: 500px;
+  height: 650px;
+}
+
 .sidebar {
   position: fixed;
   left: -300px;
   width: 250px;
   height: 100%;
-  background: gray;
+  background: #236a31;
   transition-duration: 0.4s;
 }
 
@@ -21,7 +95,7 @@ body {
   font-size: 24px;
   color: white;
   text-align: center;
-  background: darkgray;
+  background: #00644c;
   user-select: none;
   padding: 12px;
 }
@@ -42,17 +116,13 @@ ul li :hover {
 
 .sidebar ul a i {
   margin-right: 12px;
+  transition: 0.6s;
 }
 
-section {
-  background: url(/Bilder/BG.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-}
 #check {
   display: none;
 }
+
 label #button,
 label #close {
   position: absolute;
@@ -60,6 +130,7 @@ label #close {
   border-radius: 4px;
 }
 label #button {
+  position: fixed;
   left: 40px;
   top: 30px;
   color: white;
@@ -69,6 +140,7 @@ label #button {
 
 label #close {
   z-index: 1;
+  position: fixed;
   left: -200px;
   top: 12px;
   font-size: 32px;
@@ -90,27 +162,34 @@ label #close {
   left: 0;
 }
 
-#check:checked ~ section {
+#check:checked ~ main {
   margin-left: 250px;
   transition: 0.6s;
 }
-/* .button {
+
+.button {
   background-color: white;
   color: black;
-  border: 2px solid #008cba;
-  padding: 15px 32px;
+  border: 2px solid #506c0b;
+  padding: 12px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 48px;
-  margin: 4px 2px;
+  font-size: 18px;
+  margin: 30px;
   cursor: pointer;
   border-radius: 12px;
-  transition-duration: 0.4s;
+  transition-duration: 0.5s;
+  letter-spacing: 1px;
+  font-weight: normal;
 }
 
 .button:hover {
-  background-color: #008cba;
+  background-color: green;
   color: white;
   border: none;
-} */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
