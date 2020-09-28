@@ -15,9 +15,6 @@ html {
 
 section {
   font-size: 32px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   padding: 20px;
   margin: auto;
 }
@@ -27,6 +24,9 @@ section header {
   margin-bottom: 40px;
   margin-top: 70px;
   letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 section nav {
@@ -36,6 +36,8 @@ section nav {
 section ul {
   display: block;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 section div {
@@ -45,7 +47,7 @@ section div {
 }
 
 main {
-  background: url(/Bilder/BG3.jpg) no-repeat;
+  background: url(/Bilder/BG3.1.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
@@ -61,16 +63,17 @@ footer {
 }
 
 .media {
-  display: inline-block;
-  position: relative;
-  left: 25%;
-  top: -40px;
+  display: flex;
+  justify-content: center;
 }
 
-.media figure {
-  float: left;
-  padding: 30px;
-  justify-content: space-around;
+.media img {
+  width: 7vw;
+  margin: 14px;
+}
+
+.songs iframe {
+  padding: 40px;
 }
 
 .trailers iframe {
@@ -111,12 +114,13 @@ footer {
 }
 
 ul li :hover {
-  padding-left: 55px;
+  padding-left: 50px;
+  color: black;
 }
 
 .sidebar ul a i {
   margin-right: 12px;
-  transition: 0.6s;
+  transition: 0.4s;
 }
 
 #check {
