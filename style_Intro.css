@@ -16,7 +16,6 @@ html {
 section {
   font-size: 32px;
   padding: 20px;
-  margin: auto;
 }
 
 section header {
@@ -69,20 +68,24 @@ footer {
 
 .media img {
   width: 7vw;
-  margin: 14px;
+  height: 14vh;
+  margin: 7vh;
+  padding-bottom: 4%;
 }
 
-.songs iframe {
-  padding: 40px;
-}
-
-.trailers iframe {
-  padding: 40px;
+.trailers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .space {
-  margin-top: 500px;
-  height: 650px;
+  margin-top: 100vh;
+  height: 100vh;
+}
+
+.small-Menu {
+  display: none;
 }
 
 .sidebar {
@@ -120,7 +123,7 @@ ul li :hover {
 
 .sidebar ul a i {
   margin-right: 12px;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 #check {
@@ -133,6 +136,7 @@ label #close {
   cursor: pointer;
   border-radius: 4px;
 }
+
 label #button {
   position: fixed;
   left: 40px;
@@ -196,4 +200,16 @@ label #close {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  label #button {
+    display: none;
+  }
+
+  .small-Menu {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
 }
