@@ -46,7 +46,7 @@ section div {
 }
 
 main {
-  background: url("/Bilder/BG3.1.jpg") no-repeat;
+  background: url("Bilder/BG3.1.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
